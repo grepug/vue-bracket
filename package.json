@@ -1,6 +1,6 @@
 {
   "name": "vue-bracket",
-  "version": "0.0.1",
+  "version": "0.0.4",
   "description": "bracket for matches",
   "main": "dist/vue-bracket.js",
   "author": "GrePuG <sk@grepug.com>",
@@ -31,6 +31,8 @@
     "jade": "^1.11.0",
     "jade-loader": "^0.8.0",
     "json-loader": "^0.5.4",
+    "less": "^2.7.1",
+    "less-loader": "^2.2.3",
     "url-loader": "^0.5.7",
     "vue-hot-reload-api": "^1.2.0",
     "vue-html-loader": "^1.0.0",

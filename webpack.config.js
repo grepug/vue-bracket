@@ -6,7 +6,9 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, './dist'),
     publicPath: '/dist/',
-    filename: 'vue-bracket.js'
+    filename: 'vue-bracket.js',
+    library: 'VueBracket',
+    libraryTarget: 'umd'
   },
   resolveLoader: {
     root: path.join(__dirname, 'node_modules'),

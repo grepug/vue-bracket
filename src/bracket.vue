@@ -6,12 +6,14 @@
         .bracket-column-game(v-for="p in r.result")
           .bracket-cell(v-for="cell in p", style="width: 125px", :style="{height: Math.pow(2, index) * 40 + 'px'}")
             ul.race
-              li
-                img(:src="cell.headimgurl", src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEK3OiaEFu3GUzEJsVuBECq3Sl5GPXNBakIQ5yN6po3GP98n2osawuw7SCeQibwJwSB4lU99kssS8gSQ/0")
+              //- li
+              //-   img(:src="cell.headimgurl", src="http://wx.qlogo.cn/mmopen/PiajxSqBRaEK3OiaEFu3GUzEJsVuBECq3Sl5GPXNBakIQ5yN6po3GP98n2osawuw7SCeQibwJwSB4lU99kssS8gSQ/0")
               li
                 span(v-text="cell.nickname")
               li
-                span(v-text="cell.score || 0")
+                //- span(v-text="cell.score || 0")
+                //- span 21 21 21
+                span(v-text="cell.score ? cell.score.join(' ') : '21 21 21'")
       .bracket-arrow(v-if="index < result.length - 1")
         h4(style="visibility: hidden") 1
         div(v-for="el in r.result")
@@ -33,9 +35,11 @@ export default {
             result: [
               [
                 {
-                  nickname: 'grepug'
+                  nickname: '邵锴',
+                  score: [13, 21, 21]
                 }, {
-                  nickname: 'sk'
+                  nickname: '李浩洋',
+                  score: [21, 13, 13]
                 }
               ],
               [
